@@ -11,6 +11,7 @@ $redirect_uri = 'https://gecmanow.site';
 
 $out = new IntegrationClass($subdomain, $client_id, $secret_key, $code, $redirect_uri);
 
+var_dump($out);
 /**
  * Данные получаем в формате JSON, поэтому, для получения читаемых данных,
  * нам придётся перевести ответ в формат, понятный PHP

@@ -12,6 +12,7 @@ class IntegrationClass
     protected $code;
     protected $redirect_uri;
     protected $grant_type = 'authorization_code';
+    protected $result;
 
     public function __construct($subdomain, $client_id, $secret_key, $code, $redirect_uri)
     {
@@ -66,23 +67,19 @@ class IntegrationClass
             503 => 'Service unavailable',
         ];
 
-        try {
-            try
-            {
-                /** Если код ответа не успешный - возвращаем сообщение об ошибке  */
-                if ($code < 200 || $code > 204) {
-                    throw new Exception(isset($errors[$code]) ? $errors[$code] : 'Undefined error', $code);
-                }
-            }
-            catch(\Exception $e)
-            {
-                die('Ошибка: ' . $e->getMessage() . PHP_EOL . 'Код ошибки: ' . $e->getCode());
-            }
-            return $out;
-        }
-        catch (\Exception $e)
+
+        try
         {
-            die('Ошибка');
+            /** Если код ответа не успешный - возвращаем сообщение об ошибке  */
+            if ($code < 200 || $code > 204) {
+                throw new Exception(isset($errors[$code]) ? $errors[$code] : 'Undefined error', $code);
+            }
         }
+        catch(\Exception $e)
+        {
+            die('Ошибка: ' . $e->getMessage() . PHP_EOL . 'Код ошибки: ' . $e->getCode());
+        }
+
+        $this->result = $out;
     }
 }

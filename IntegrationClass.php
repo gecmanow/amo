@@ -1,5 +1,6 @@
 <?php
 
+namespace AmoCRM;
 
 class IntegrationClass
 {

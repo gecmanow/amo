@@ -12,7 +12,7 @@ class IntegrationClass
     protected $code;
     protected $redirect_uri;
     protected $grant_type = 'authorization_code';
-    protected $result;
+    public $result;
 
     public function __construct($subdomain, $client_id, $secret_key, $code, $redirect_uri)
     {

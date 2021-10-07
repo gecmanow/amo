@@ -66,18 +66,23 @@ class IntegrationClass
             503 => 'Service unavailable',
         ];
 
-        try
-        {
-            /** Если код ответа не успешный - возвращаем сообщение об ошибке  */
-            if ($code < 200 || $code > 204) {
-                throw new Exception(isset($errors[$code]) ? $errors[$code] : 'Undefined error', $code);
+        try {
+            try
+            {
+                /** Если код ответа не успешный - возвращаем сообщение об ошибке  */
+                if ($code < 200 || $code > 204) {
+                    throw new Exception(isset($errors[$code]) ? $errors[$code] : 'Undefined error', $code);
+                }
             }
+            catch(\Exception $e)
+            {
+                die('Ошибка: ' . $e->getMessage() . PHP_EOL . 'Код ошибки: ' . $e->getCode());
+            }
+            return $out;
         }
-        catch(\Exception $e)
+        catch (\Exception $e)
         {
-            die('Ошибка: ' . $e->getMessage() . PHP_EOL . 'Код ошибки: ' . $e->getCode());
+            die('Ошибка');
         }
-
-        return $out;
     }
 }

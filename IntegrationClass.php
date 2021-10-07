@@ -2,6 +2,8 @@
 
 namespace AmoCRM;
 
+use Exception;
+
 class IntegrationClass
 {
     protected $subdomain;

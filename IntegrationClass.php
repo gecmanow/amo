@@ -18,7 +18,6 @@ class IntegrationClass
         $this->code = $code;
         $this->redirect_uri = $redirect_uri;
 
-
         $link = 'https://' . $this->subdomain . '.amocrm.ru/oauth2/access_token';
 
         /** Соберем данные для запроса */
@@ -75,5 +74,7 @@ class IntegrationClass
         {
             die('Ошибка: ' . $e->getMessage() . PHP_EOL . 'Код ошибки: ' . $e->getCode());
         }
+
+        return $out;
     }
 }

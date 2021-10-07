@@ -1,4 +1,5 @@
 <?php
+require_once 'IntegrationClass.php';
 
 use AmoCRM\IntegrationClass;
 

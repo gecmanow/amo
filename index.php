@@ -17,7 +17,7 @@ var_dump($out->result);
  * нам придётся перевести ответ в формат, понятный PHP
  */
 
-$response = json_decode($out, true);
+$response = json_decode($out->result, true);
 
 $access_token = $response['access_token']; //Access токен
 $refresh_token = $response['refresh_token']; //Refresh токен

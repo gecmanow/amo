@@ -9,7 +9,7 @@ $data = [
     'client_secret' => 'pTrrKmA2LG3mRqUlvhmLMVI0ugCFlArYZLoBoCu0t5sCY4lfPcolR5JZqQesavsf', // секретный ключ нашей интеграции
     'grant_type' => 'authorization_code',
     'code' => 'def50200477f610768426f8240fcd8f5f791d1c8f567fef1ab94bf53a1b4e5649a5d8ad09f0daeb571a983e3a6fc4f91b4e113e155770db8ce5630edf07529d8343cf8126efebf7c644cac03ad06d80d307b89328ed6214cac94fa7a054cdf79d2ae7ab2204e2ed5493753ca07c2741b114b998add19134ae22175efdfdfe5e5139d8edcb03d73e7ef896960f11766b63522cb4414db43a4baa82c428400a003b211e0d2d67d75c48b64fd75cd2d01635f1539dcd4a0b944c7214877b2f607fbaa38b47f1ef9efc23afbc1b5f738a71c106b492f88c6ca8498cc7b38d6cf334d1875cc7f263e49cf8e24aeeabee0f0c04608028318eda9500281cb151f5b119dc1830b3042882f9f8c6b352cb71d6ee697dc98859f66067c49e0b4c23a51f01764902ce4b106611a13b7775df60961371117c0aa8c39717cfaeaac022a7eb4a1abb33452460f78bd576039c189d478c0eae6316b175703e58c4966408ed017b3396ee55978190462a9079beea056652e941204a197ea3179a573f4d8c0f9347074b105e0c33a5f8ee254aa8ef355f372df5e08d5dea099fc94c7bcdc40e448ba86055f4573040f54b3fffb74716e32d27fcf0bb8e1f4c0e5fd421e2f615d23', // код авторизации нашей интеграции
-    'redirect_uri' => 'https://getsmanovchinit.amocrm.ru',// домен сайта нашей интеграции
+    'redirect_uri' => 'https://gecmanow.site',// домен сайта нашей интеграции
 ];
 
 /**

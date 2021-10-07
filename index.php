@@ -15,6 +15,7 @@ new IntegrationClass($subdomain, $client_id, $secret_key, $code, $redirect_uri);
  * Данные получаем в формате JSON, поэтому, для получения читаемых данных,
  * нам придётся перевести ответ в формат, понятный PHP
  */
+var_dump($out);
 $response = json_decode($out, true);
 
 $access_token = $response['access_token']; //Access токен
